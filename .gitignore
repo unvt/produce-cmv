@@ -1,0 +1,4 @@
+config/default.hjson
+node_modules
+pmtiles/*.pmtiles
+log/*.log

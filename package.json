@@ -1,0 +1,33 @@
+{
+  "name": "produce-cmv",
+  "version": "1.0.0",
+  "description": "ClearMap Vector creation  (Convert vector tile from PostGIS server) with some practice materials",
+  "main": "index.js",
+  "scripts": {
+    "convert": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unvt/produce-cmv.git"
+  },
+  "keywords": [],
+  "author": "ubukawa",
+  "license": "unlicense",
+  "bugs": {
+    "url": "https://github.com/unvt/produce-cmv/issues"
+  },
+  "homepage": "https://github.com/unvt/produce-cmv#readme",
+  "dependencies": {
+    "better-queue": "^3.8.12",
+    "child_process": "^1.0.2",
+    "cli-spinner": "^0.2.10",
+    "config": "^3.3.8",
+    "fs": "^0.0.1-security",
+    "hh-mm-ss": "^1.2.0",
+    "hjson": "^3.2.2",
+    "pg": "^8.8.0",
+    "prettysize": "^2.0.0",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  }
+}

@@ -1,0 +1,43 @@
+{
+    relations: [
+        un_base::vectortile::custom_planet_land_08_a  
+        un_base::vectortile::custom_planet_ocean_08_a
+        un_base::vectortile::un_glc30_global_lc_ss_a
+        un_base::vectortile::unmap_bndl_l
+        un_base::vectortile::unmap_bndl05_l
+        un_base::vectortile::unmap_bndl25_l
+        un_base::vectortile::unmap_bnda_cty_anno_03_p
+        un_base::vectortile::unmap_bnda_cty_anno_04_p
+        un_base::vectortile::unmap_bnda_cty_anno_05_p
+        un_base::vectortile::unmap_bnda_cty_anno_06_p
+        un_base::vectortile::unmap_phyp_label_04_p
+        un_base::vectortile::unmap_phyp_label_06_p
+        un_base::vectortile::unmap_popp_p
+        un_base::vectortile::unmap_wbya10_a
+        un_base::vectortile::unmap_dral10_l
+        un_base::vectortile::custom_ne_10m_bathymetry_a
+        un_base::vectortile::unmap_wbya_label_05_p
+        un_base::vectortile::unmap_wbya_label_06_p
+    ]
+    connection:{
+        un_base:{
+            host: localhost
+            port: 5432
+            dbUser: user
+            dbPassword: password
+        }
+        osm_planet:{
+            host: localhost
+            port: 5432
+            dbUser: user
+            dbPassword: password
+        }        
+    }
+    concurrent: 1
+    spinnerString: 1
+    fetchSize: 30000
+    outputDir: outputDir
+    pmtilesDir: pmtiles
+    logDir: log
+    tippecanoePath: tippecanoe
+}
