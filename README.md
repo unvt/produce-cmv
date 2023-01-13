@@ -13,4 +13,5 @@ This is from a subset for ClearMap creation in the repository "produce-gsc-6."
 2. Edit modify.js when necessary
 3. Run "index.js" or "npm run build"
 
-
+# Document
+Practice material https://qiita.com/T-ubu/items/3855054e394e3e7518fe
