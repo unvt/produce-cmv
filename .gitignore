@@ -1,4 +1,5 @@
 config/default.hjson
+config/default1.hjson
 node_modules
 pmtiles/*.pmtiles
 log/*.log
