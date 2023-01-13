@@ -1,12 +1,13 @@
 const config = require('config')
 const { Pool, Query } = require('pg')
 const modify = require('./modify.js')
-const fs = require('fs')
+const { spawn } = require('child_process')
 
 // config constants
 const relations = config.get('relations')
 const fetchSize = config.get('fetchSize')
 const outTextDir = config.get('outputDir')
+const tippecanoePath = config.get('tippecanoePath')
 
 let pools = {}
 
@@ -60,11 +61,17 @@ const fetch = (client, database, view, stream) =>{
 }
 
 
-
 for (relation of relations){
     var startTime = new Date()
     const [database, schema, view] = relation.split('::')
-    const stream = fs.createWriteStream(`${outTextDir}/${database}-${schema}-${view}.txt`)
+    //const stream = fs.createWriteStream(`${outTextDir}/${database}-${schema}-${view}.txt`)
+    const tippecanoe = spawn(tippecanoePath, [
+        `--output=${outTextDir}/${database}-${schema}-${view}.pmtiles`,
+        `--no-tile-compression`,
+        `--minimum-zoom=0`,
+        `--maximum-zoom=5`
+      ], { stdio: ['pipe', 'inherit', 'inherit'] })
+    const stream = tippecanoe.stdin
     if(!pools[database]){
         pools[database] = new Pool({
             host: config.get(`connection.${database}.host`),

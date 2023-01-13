@@ -2,5 +2,7 @@ config/default.hjson
 config/default1.hjson
 node_modules
 outputDir/un_base*.txt
+outputDir/*.pmtiles
 pmtiles/*.pmtiles
 log/*.log
+log/*.json
